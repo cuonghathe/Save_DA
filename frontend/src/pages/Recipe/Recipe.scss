@@ -1,0 +1,105 @@
+.recipe-container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 2rem;
+}
+
+.recipe-header-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.recipe-header-container {
+  flex: 1;
+}
+
+.recipe-header {
+  text-align: left;
+}
+
+.recipe-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.recipe-rating {
+  margin-top: 1rem;
+}
+
+.recipe-author {
+  margin-top: 1rem;
+}
+
+.recipe-image-container {
+  margin-top: 1rem;
+}
+
+.recipe-image-card {
+  max-width: 30rem;
+  border: none;
+}
+
+.mb-4{
+  margin-top: 0.5rem;
+}
+
+.recipe-details {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+}
+
+
+.servings-display {
+  margin: 0 1rem;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+
+.recipe-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.recipe-info-card {
+  max-width: 35rem;
+  border: none;
+}
+
+.recipe-ingredients-instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ingredients-card,
+.instructions-card {
+  max-width: stretch;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.review{
+  padding-bottom:2px;
+}
+
+.user_review{
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  max-width: 550px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
