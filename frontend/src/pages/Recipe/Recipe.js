@@ -104,7 +104,7 @@ const RecipeDetails = () => {
                                 <Form.Check
                                     key={index}
                                     type="checkbox"
-                                    label={`${ingredient.name} (${ingredient.measurement}) - ${ingredient.quantity}`}
+                                    label={`${ingredient.name}: ${ingredient.quantity} (${ingredient.measurement})`}
                                     checked={checkedIngredients.includes(ingredient.name)}
                                     onChange={() => handleCheck(ingredient.name)}
                                     className={checkedIngredients.includes(ingredient.name) ? 'checked' : ''}

@@ -2,21 +2,27 @@
     width: 100%;
 }
 
+section .form_data form .form_input input {
+    margin-top: 15px;
+
+}
+
+
 
 section .form_data form .btn-danger {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10%;
+    width: 7%;
     height: 100%;
-    padding: 5px 10px;
-    background-color: #4299e1;
+    padding: 10px 5px;
+    background-color: #de0404;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
-    margin-top: 10px;
+    margin-top: 0px;
     transition: all 0.3s;
 }
 .create_recipe_body{
@@ -188,7 +194,7 @@ section .form_data form .btn-danger {
             border-radius: 5px;
             outline: none;
             font-size: 14px;
-            margin-top: -5px;
+            margin-top: 0px;
 
             &:focus {
                 border: 2px solid rgba(66, 153, 225, 0.6);

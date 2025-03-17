@@ -16,9 +16,17 @@ export const Login = () => {
     try {
       const response = await axios.post('http://localhost:5000/user/api/login', { email, password });
       console.log(response.data);
+      
       if (response.data.message === "Đăng nhập thành công") {
-        localStorage.setItem('authToken', response.data.tokenData.token);
-        navigate('/');
+        const token = response.data.tokenData.token;
+        localStorage.setItem('authToken', token);
+        
+        const decoded = JSON.parse(atob(token.split('.')[1]));
+        if (decoded.isAdmin) {
+          navigate('/admin');
+        } else {
+          navigate('/');
+        }
       }
     } catch (error) {
       console.error('Đăng nhập thất bại:', error);

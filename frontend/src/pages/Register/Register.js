@@ -22,7 +22,7 @@ const Register = () => {
         formData.append('password', password);
         formData.append('comfirmpassword', confirmPassword);
         if (file) {
-            formData.append('file', file);
+            formData.append('userprofile', file);
         }
 
         try {

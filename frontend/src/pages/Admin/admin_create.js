@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Container, Button } from 'react-bootstrap';
-import "./Create_recipe.scss";
 
-const CreateRecipe = () => {
+const AdminCreateRecipe = () => {
   const [recipename, setRecipename] = useState('');
   const [description, setDescription] = useState('');
   const [instructions, setInstructions] = useState(['']);
@@ -220,4 +219,4 @@ const CreateRecipe = () => {
   );
 };
 
-export default CreateRecipe;
+export default AdminCreateRecipe;

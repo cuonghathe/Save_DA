@@ -26,23 +26,27 @@ const Dashboard = () => {
   };
 
   return (
-    <Container>
-      <h1 className="text-center mt-5">Recipe</h1>
-      <div className="recipecard">
-        {recipes.map((recipe) => (
-          <Card key={recipe._id} style={{ maxWidth: '21rem', width: "100%", marginBottom: "15px", boxShadow: "0px 2px 20px #cfd8dc", height: "27rem", cursor: "pointer" }}>
-            <Card.Img style={{ width: "100%", height: "13rem" }} variant="top" src={recipe.recipeImg || '/logo192.png'} />
-            <Card.Body>
-              <Card.Title>{recipe.recipename}</Card.Title>
-              <Card.Text>
-                {recipe.description}
-              </Card.Text>
-              <Card.Text>
-                <small className="text-muted">Review({recipe.reviewCount})</small>              </Card.Text>
-              <Button variant="outline-danger" onClick={() => handleNavigateRecipe(recipe._id)}>View Recipe</Button>
-            </Card.Body>
-          </Card>
-        ))}
+    <Container className='dashboard_container'>
+      <div className="recipe_container">
+        <h1 className="text-center mt-5">Công thức</h1>
+        <div className="recipecard">
+          {recipes.map((recipe) => (
+            <Card key={recipe._id} style={{ maxWidth: '21rem', width: "100%", marginBottom: "15px", boxShadow: "0px 2px 20px #cfd8dc", height: "27rem", cursor: "pointer" }}>
+              <Card.Img style={{ width: "100%", height: "13rem" }} variant="top" src={recipe.recipeImg || '/logo192.png'} />
+              <Card.Body>
+                <Card.Title>{recipe.recipename}</Card.Title>
+                <Card.Text  className="card-text">
+                  {recipe.description.length > 100
+                    ? recipe.description.slice(0, 100) + "..."
+                    : recipe.description}
+                </Card.Text>
+                <Card.Text>
+                  <small className="text-muted">Review({recipe.reviewCount})</small>              </Card.Text>
+                <Button variant="outline-danger" onClick={() => handleNavigateRecipe(recipe._id)}>Xem công thức</Button>
+              </Card.Body>
+            </Card>
+          ))}
+        </div>
       </div>
     </Container>
   );
